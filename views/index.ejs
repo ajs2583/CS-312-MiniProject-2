@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rain Checker</title>
+		<link rel="stylesheet" href="/styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Will it rain tomorrow?</h1>
+
+			<% if (error) { %>
+			<p style="color: red; font-weight: bold; margin-bottom: 1rem">
+				<%= error %>
+			</p>
+			<% } %>
+
+			<form action="/check-weather" method="GET">
+				<input
+					type="text"
+					name="city"
+					placeholder="Enter a city"
+					required
+					value="<%= previousInput %>"
+				/>
+				<button type="submit">Check</button>
+			</form>
+		</div>
+	</body>
+</html>

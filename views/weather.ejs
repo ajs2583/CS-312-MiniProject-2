@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Weather Result</title>
+		<link rel="stylesheet" href="/styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Weather for <%= city %></h1>
+			<% if (willRain) { %>
+			<p>🌧️ Yes, it will rain tomorrow.</p>
+			<% } else { %>
+			<p>☀️ No, it won't rain tomorrow.</p>
+			<% } %>
+			<a href="/">Try another city</a>
+		</div>
+	</body>
+</html>
